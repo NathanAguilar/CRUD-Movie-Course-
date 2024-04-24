@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import backgroundImage from "./Image/pexels-cottonbro-4722577.jpg";
+
 
 function CreateMovie () {
     const[movie, setMovie] = useState()
@@ -19,7 +21,7 @@ function CreateMovie () {
     }
     
     return (
-        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
+        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center" style={{backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center"}}>
             <div className='w-50 bg-white rounded p-3'>
                 <form onSubmit={Submit}>
                     <h2>Add Movie</h2>

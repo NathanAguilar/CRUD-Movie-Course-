@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import backgroundImage from "./Image/pexels-cottonbro-4722577.jpg";
 
 function Movies () {
     const [ Movies, setMovies ] = useState([])
@@ -19,7 +20,8 @@ const handleDelete =(id) => {
 }
 
     return (
-        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
+        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center flex-column" style={{backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center"}}>
+            <h2 className="text-white mb-4">Movie Database</h2>
             <div className='w-50 bg-white rounded p-3'>
                 <Link to="/create" className="btn btn-success">Add +</Link>
                 <table className="table">

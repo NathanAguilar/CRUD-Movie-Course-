@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios'
+import backgroundImage from "./Image/pexels-cottonbro-4722577.jpg";
+
 
 function UpdateMovie () {
     const {id} = useParams()
@@ -31,7 +33,7 @@ const Update = (e) => {
 }
 
     return (
-        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
+        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center" style={{backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center"}}>
             <div className='w-50 bg-white rounded p-3'>
                 <form onSubmit={Update}>
                     <h2>Update Movie</h2>
